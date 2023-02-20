@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+:root{
+    --size:0;
+}
+*{
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #151623;
+    color: #fff;
+}
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( 358.4deg,  rgba(249,151,119,1) -2.1%, rgba(98,58,162,1) 90% );
+    clip-path: circle(25% at 10% 10%);
+}
+body::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( 109.6deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% );
+    clip-path: circle(20% at 90% 60%);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    position: relative;
+}
+.card{
+    width: 280px;
+    height: 400px;
+    margin: 20px;
+    background: rgb(255,255,255,0.1);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    border-left: 1px solid rgb(255,255,255,0.4);
+    border-top: 1px solid rgb(255,255,255,0.4);
+    overflow: none;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+.card .content{
+    width: 220px;
+    font-size: 1.1em;
+    position: relative;
+    
+}
+.card .content .wrapper{
+    position: absolute;
+    transform: translateY(10%);
+    opacity: 0;
+    transition: 0.55s ease-out;
+}
+
+.card .content h1{
+    font-size: 80px;
+    color: rgb(255,255,255,0.4);
+    position: absolute;
+    top: -180px;
+    right: 0px;
+    pointer-events: none;
+}
+.card .content h2{
+    display: inline-block;
+    margin: 10px;
+    font-size: 1.4em;
+    font-weight: 200;
+}
+
+.card .content p{
+    font-size: 0.9em;
+    padding: 20px 0px 40px;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.card .content button{
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    color: rgb(255,255,255,0.5);
+    background: rgb(255,255,255,0.1);
+    border: none;
+    outline-style: none;
+    font-size: 0.9em;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+.card:hover .wrapper {
+    opacity: 1;
+    transform: translateY(-90px);
+}

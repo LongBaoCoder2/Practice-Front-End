@@ -1,0 +1,20 @@
+.body{
+  margin: 0;
+  padding: 0;
+}
+
+.circle{
+  margin: 0 auto;
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  border: 8px solid #77b555;
+  border-right: 8px solid transparent;
+  animation: animationRotate 0.8s infinite cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+@keyframes animationRotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
